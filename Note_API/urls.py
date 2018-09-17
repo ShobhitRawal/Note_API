@@ -16,11 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.conf.urls import url, include
 from django.urls import path
-from api.resources import NoteResource
 
-note_resource = NoteResource()
+
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include(note_resource.urls)),
+    path('api/', include('api.urls')),
 ]
